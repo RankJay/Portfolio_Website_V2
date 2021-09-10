@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: local('Poppins-Regular'), url(../assets/Poppins-Regular.ttf) format('truetype');
+}
+
+:root {
+    font-family: Poppins-Regular;
+}
+
+body button {
+    font-family: Poppins-Regular;
+    color: #f0f0f0;
+}
+
+.component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+h3 {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #f0f0f0;
+}
+
+p {
+    font-size: .8rem;
+    line-height: 1rem;
+    opacity: .7;
+    color: #f0f0f0;
+}
+
+svg {
+    max-width: 100px;
+}

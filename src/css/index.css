@@ -14,30 +14,30 @@
 }
 
 :root {
-    --theme-font-fallback: Poppins-Regular;
-    --theme-font-regular: Alliance-No1-Bold;
-    --theme-light-background: #f4f7f8;
-    --theme-dark-background: #101010;
     --theme-responsive-size: 2vmax;
     --theme-response-helper: 2vmax;
+    --theme-light-background: #f4f7f8;
+    --theme-dark-background: #101010;
+    --theme-font-fallback: Poppins-Regular;
+    --theme-font-regular: Alliance-No1-Bold;
 }
 
 body {
     background-color: #000000;
-    font-family: var(--theme-font-regular),var(--theme-font-fallback), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--theme-light-background);
+    font-family: var(--theme-font-regular),var(--theme-font-fallback), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 video {
-    position: absolute;
-    z-index: -1;
-    object-fit: cover;
     width: 100%;
     height: 100%;
+    position: absolute;
+    object-fit: cover;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.1;
+    z-index: -1;
 }
 
 /* body, button, input {
@@ -62,8 +62,8 @@ video {
 }
 
 .Description {
-    font-size: calc(var(--theme-responsive-size)*0.5);
     font-family: Alliance-No1-SemiBold;
+    font-size: calc(var(--theme-responsive-size)*0.5);
     text-align: center;
 }
 
