@@ -8,7 +8,7 @@ window.onload = function() {
     var timeInHour = today.getHours();
     console.log(timeInHour)
 
-    if (timeInHour >= 19 || timeInHour < 5) {
+    if (timeInHour >= 219 || timeInHour < 5) {
         var HREF = document.getElementById('href');
         HREF.style["color"] = "#888888";
         var bodyNightTheme = document.getElementById('bodyNightTheme');
@@ -18,13 +18,6 @@ window.onload = function() {
         Showcase.style["background-color"] = "#1e1e26";
         News.style["background-color"] = "#1e1e26";
         document.documentElement.style.setProperty('--theme-day-border', '0.5px solid #16161c');
-
-        document.getElementById("href").addEventListener("mouseover", function() {
-            document.getElementById("href").style['color'] = "#ffffff";
-        });
-        document.getElementById("href").addEventListener("mouseout", function() {
-            document.getElementById("href").style['color'] = "#888888";
-        });
     }
   
     document.addEventListener('visibilitychange', function(e) {

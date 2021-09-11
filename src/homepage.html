@@ -120,6 +120,21 @@
         </div>
     </div>
     <script src="js/homepage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var today = new Date();
+        var timeInHour = today.getHours();
+
+        if (timeInHour >= 219 || timeInHour < 5) {
+            $(document).ready(function(){
+            $("a").hover(function(){
+                $(this).css("color", "#ffffff");
+                }, function(){
+                $(this).css("color", "#888888");
+            });
+            });
+        }
+    </script>
     <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.js"></script> -->
 </body>
