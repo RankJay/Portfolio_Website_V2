@@ -1,0 +1,298 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: local('Poppins-Regular'), url(../assets/Poppins-Regular.ttf) format('truetype');
+    font-display: swap;
+}
+    
+@font-face {
+    font-family: 'Alliance-No1-Bold';
+    src: local('Alliance-No.1-Bold'), url(../assets/Alliance-No.1-Bold.otf) format('truetype');
+    font-display: swap;
+}
+    
+@font-face {
+    font-family: 'Alliance-No1-SemiBold';
+    src: local('Alliance-No.1-SemiBold'), url(../assets/Alliance-No.1-SemiBold.otf) format('truetype');
+    font-display: swap;
+}
+    
+@font-face {
+    font-family: 'Alliance-No1-Regular';
+    src: local('Alliance-No.1-Regular'), url(../assets/Alliance-No.1-Regular.otf) format('truetype');
+    font-display: swap;
+}
+    
+:root {
+    --theme-responsive-size: 2vmax;
+    --theme-response-helper: 2vmax;
+    --theme-responsive-helper: 2vh;
+    --theme-day-background: #f4f7f8;
+    --theme-night-background: #101010;
+    --theme-font-regular: Alliance-No1-SemiBold;
+    --theme-font-fallback: Poppins-Regular;
+    --theme-day-border: 0.5px solid var(--theme-day-background);
+    overflow-x: hidden;
+}
+
+html {
+    height: 2500px;
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+    background-color: #ffffff;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+li {
+    display: inline-flex;
+    width: calc(var(--theme-responsive-size)*3);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    font-size: calc(var(--theme-responsive-size)*0.4);
+}
+
+a {
+    text-decoration: none;
+    color: #888888;
+    font-family: Alliance-No1-Regular;
+}
+
+a:hover {
+    color: #000000;
+    transition: 0.5s;
+}
+
+
+.container {
+    display: grid;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 0.5fr 1.8fr 1.2fr 0.5fr; 
+    grid-template-rows: 1fr 2fr 0.5fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        ". . . ."
+        ". . . ."
+        ". . . ."
+        ". . . ."; 
+}
+
+.NavBar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: calc(var(--theme-responsive-size)*2.25);
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    transition: ease-in-out 1s;
+    z-index: 10;
+}
+
+.Row1Column1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 1;
+    grid-row-end: 1;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: var(--theme-day-border);
+}
+
+.Row1Column2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 1;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Row1Column3 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-column-end: 3;
+    grid-row-end: 1;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Row1Column4 {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-column-end: 4;
+    grid-row-end: 1;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Row2Column1 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 1;
+    grid-row-end: 2;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Row2Column2 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-column-end: 2;
+    grid-row-end: 2;
+    padding: 20px;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Showcase {
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: var(--theme-day-background);
+}
+
+.Row2Column3 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-column-end: 3;
+    grid-row-end: 2;
+    padding: 20px;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.News {
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: var(--theme-day-background);
+}
+
+.Row2Column4 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    grid-column-end: 4;
+    grid-row-end: 2;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Row3Column1 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-column-end: 1;
+    grid-row-end: 3;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: var(--theme-day-border);
+}
+
+.Row3Column2 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-column-end: 2;
+    grid-row-end: 3;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Row3Column3 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    grid-column-end: 3;
+    grid-row-end: 3;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Row3Column4 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+    grid-column-end: 4;
+    grid-row-end: 3;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Row4Column1 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    grid-column-end: 1;
+    grid-row-end: 4;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Row4Column2 {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    grid-column-end: 2;
+    grid-row-end: 4;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Row4Column3 {
+    grid-column-start: 3;
+    grid-row-start: 4;
+    grid-column-end: 3;
+    grid-row-end: 4;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+.Row4Column4 {
+    grid-column-start: 4;
+    grid-row-start: 4;
+    grid-column-end: 4;
+    grid-row-end: 4;
+    background-color: transparent;
+    border: var(--theme-day-border);
+}
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 5px;
+    max-height: 1px;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #0F0F13;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ffffff; 
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    margin-right: 10px;
+    padding-right: 10px;
+}

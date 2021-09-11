@@ -1,21 +1,25 @@
 @font-face {
 font-family: 'Poppins-Regular';
 src: local('Poppins-Regular'), url(../assets/Poppins-Regular.ttf) format('truetype');
+font-display: swap;
 }
 
 @font-face {
 font-family: 'Alliance-No1-Bold';
 src: local('Alliance-No.1-Bold'), url(../assets/Alliance-No.1-Bold.otf) format('truetype');
+font-display: swap;
 }
 
 @font-face {
 font-family: 'Alliance-No1-SemiBold';
 src: local('Alliance-No.1-SemiBold'), url(../assets/Alliance-No.1-SemiBold.otf) format('truetype');
+font-display: swap;
 }
 
 @font-face {
 font-family: 'Alliance-No1-Regular';
 src: local('Alliance-No.1-Regular'), url(../assets/Alliance-No.1-Regular.otf) format('truetype');
+font-display: swap;
 }
 
 :root {
