@@ -51,18 +51,36 @@
 
 </head>
 
-<body id="bodyNightTheme" onscroll="blurNavBar()">
+<body id="bodyNightTheme"">
     <!-- CUSTOM CURSOR-->
     <!-- your content here... -->
     <div class="NavBar" id="NavBar">
-        <ul class="ul">
-            <li><a href="/" id="href">Home</a></li>
-            <li><a href="/projects" id="href">Projects</a></li>
+        <ul class="ulNavBar">
+            <li><a id="href" onClick="document.getElementById('containerLanding').scrollIntoView();">Home</a></li>
+            <li><a id="href" onClick="document.getElementById('containerProjects').scrollIntoView();">Projects</a></li>
             <li><a href="/about" id="href">About</a></li>
-            <li><a href="/contact" id="href">Contact Me</a></li>
+            <li><a id="href" onClick="document.getElementById('containerContactMe').scrollIntoView();">Contact Me</a>
+            </li>
         </ul>
     </div>
-    <div class="container">
+    <div class="Footer" id="Footer">
+        <ul class="ulFooter" id="ulFooterLeft">
+            <li id="LIFooter"><a href="https://www.behance.net/jayrank" target="_blank"><img class="social-medias"
+                        src="./assets/behance.svg"></a></li>
+            <li id="LIFooter"><a href="https://github.com/RankJay" target="_blank"><img class="social-medias"
+                        src="./assets/github.svg"></a></li>
+            <li id="LIFooter"><a href="https://twitter.com/RankJay1" target="_blank"><img class="social-medias"
+                        src="./assets/twitter.svg"></a></li>
+            <li id="LIFooter"><a href="https://www.instagram.com/rank_jay/" target="_blank"><img class="social-medias"
+                        src="./assets/instagram.svg"></a></li>
+        </ul>
+        <ul class="ulFooter" id="ulFooterRight">
+            <li id="LIFooter"><a href=""><img class="social-medias" src="./assets/theme.svg"
+                        onclick="activateNightTheme()"></a></li>
+            <li id="LIFooter"><a href="/src/fallback.html"><img class="social-medias" src="./assets/share.svg"></a></li>
+        </ul>
+    </div>
+    <div class="containerLanding" id="containerLanding">
         <!-- ROW 1... -->
         <div class="Row1Column1">
 
@@ -82,9 +100,11 @@
 
         </div>
         <div class="Row2Column2">
+            <div class="ShowcaseTitle" id="ShowcaseTitle">Insied</div>
             <div class="Showcase" id="Showcase"></div>
         </div>
         <div class="Row2Column3">
+            <div class="NewsTitle" id="NewsTitle">GDSC 2020-21</div>
             <div class="News" id="News"></div>
         </div>
         <div class="Row2Column4">
@@ -119,20 +139,117 @@
 
         </div>
     </div>
+    <div class="containerUnknown" id="containerUnknown">
+        <div class="Row1Column1">
+
+        </div>
+        <div class="Row1Column2">
+
+        </div>
+        <div class="Row1Column3">
+
+        </div>
+    </div>
+    <div class="containerProjects" id="containerProjects">
+        <!-- ROW 1... -->
+        <div class="Row1Column1">
+
+        </div>
+        <div class="Row1Column2">
+
+        </div>
+        <div class="Row1Column3">
+
+        </div>
+        <div class="Row1Column4">
+
+        </div>
+
+        <!-- ROW 2... -->
+        <div class="Row2Column1">
+
+        </div>
+        <div class="Row2Column2">
+
+        </div>
+        <div class="Row2Column3">
+
+        </div>
+        <div class="Row2Column4">
+
+        </div>
+
+        <!-- ROW 3... -->
+        <div class="Row3Column1">
+
+        </div>
+        <div class="Row3Column2">
+
+        </div>
+        <div class="Row3Column3">
+
+        </div>
+        <div class="Row3Column4">
+
+        </div>
+
+        <!-- ROW 4... -->
+        <div class="Row4Column1">
+
+        </div>
+        <div class="Row4Column2">
+
+        </div>
+        <div class="Row4Column3">
+
+        </div>
+        <div class="Row4Column4">
+
+        </div>
+    </div>
+    <div class="containerContactMe" id="containerContactMe">
+    </div>
     <script src="js/homepage.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         var today = new Date();
         var timeInHour = today.getHours();
 
-        if (timeInHour >= 219 || timeInHour < 5) {
-            $(document).ready(function(){
-            $("a").hover(function(){
-                $(this).css("color", "#ffffff");
-                }, function(){
-                $(this).css("color", "#888888");
+        if (timeInHour >= 19 || timeInHour < 5) {
+            $(document).ready(function () {
+                $("a").hover(function () {
+                    $(this).css("color", "#ffffff");
+                }, function () {
+                    $(this).css("color", "#888888");
+                });
             });
-            });
+        }
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("NavBar").style.height = "height: calc(var(--theme-responsive-size)*1.75)";
+                document.getElementById("NavBar").style["backdrop-filter"] = "blur(50px)";
+            } else {
+                document.getElementById("NavBar").style.height = "calc(var(--theme-responsive-size)*2.25)";
+                document.getElementById("NavBar").style["backdrop-filter"] = "blur(0px)";
+            }
+        }
+
+        function activateNightTheme() {
+            var HREF = document.getElementById('href');
+            HREF.style["color"] = "#888888";
+            // var bodyNightTheme = document.getElementById('bodyNightTheme');
+            // var Showcase = document.getElementById('Showcase');
+            // var News = document.getElementById('News');
+            // bodyNightTheme.style["background-color"] = "#0F0F13";
+            // Showcase.style["background-color"] = "#1e1e26";
+            // News.style["background-color"] = "#1e1e26";
+            document.documentElement.style.setProperty('--theme-responsive-color', 'rgba(255, 255, 255, 0.05)');
+            document.documentElement.style.setProperty('--theme-day-night-background', '#0F0F13');
+            document.documentElement.style.setProperty('--theme-day-night-foreground', '#ffffff');
+            document.documentElement.style.setProperty('--theme-day-night-filter', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(126deg) brightness(105%) contrast(104%)');
         }
     </script>
     <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script>

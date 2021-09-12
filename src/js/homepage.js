@@ -8,16 +8,19 @@ window.onload = function() {
     var timeInHour = today.getHours();
     console.log(timeInHour)
 
-    if (timeInHour >= 219 || timeInHour < 5) {
+    if (timeInHour >= 19 || timeInHour < 5) {
         var HREF = document.getElementById('href');
         HREF.style["color"] = "#888888";
-        var bodyNightTheme = document.getElementById('bodyNightTheme');
-        var Showcase = document.getElementById('Showcase');
-        var News = document.getElementById('News');
-        bodyNightTheme.style["background-color"] = "#0F0F13";
-        Showcase.style["background-color"] = "#1e1e26";
-        News.style["background-color"] = "#1e1e26";
-        document.documentElement.style.setProperty('--theme-day-border', '0.5px solid #16161c');
+        // var bodyNightTheme = document.getElementById('bodyNightTheme');
+        // var Showcase = document.getElementById('Showcase');
+        // var News = document.getElementById('News');
+        // bodyNightTheme.style["background-color"] = "#0F0F13";
+        // Showcase.style["background-color"] = "#1e1e26";
+        // News.style["background-color"] = "#1e1e26";
+        document.documentElement.style.setProperty('--theme-responsive-color', 'rgba(255, 255, 255, 0.05)');
+        document.documentElement.style.setProperty('--theme-day-night-background', '#0F0F13');
+        document.documentElement.style.setProperty('--theme-day-night-foreground', '#ffffff');
+        document.documentElement.style.setProperty('--theme-day-night-filter', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(126deg) brightness(105%) contrast(104%)');
     }
   
     document.addEventListener('visibilitychange', function(e) {
@@ -42,11 +45,11 @@ window.onload = function() {
     }
 };
 
-async function blurNavBar() {
-    var NavBar = document.getElementById('NavBar');
-    NavBar.style["backdrop-filter"] = "blur(75px)";
-    NavBar.style["height"] = "alc(var(--theme-responsive-size)*1.75)";
-    await new Promise(r => setTimeout(r, 500));
-    NavBar.style["backdrop-filter"] = "blur(0px)";
-    //NavBar.style["height"] = "alc(var(--theme-responsive-size)*2.25)";
-}
+// async function blurNavBar() {
+//     var NavBar = document.getElementById('NavBar');
+//     NavBar.style["backdrop-filter"] = "blur(75px)";
+//     NavBar.style["height"] = "calc(var(--theme-responsive-size)*1.75)";
+//     await new Promise(r => setTimeout(r, 500));
+//     NavBar.style["backdrop-filter"] = "blur(0px)";
+//     //NavBar.style["height"] = "alc(var(--theme-responsive-size)*2.25)";
+// }
