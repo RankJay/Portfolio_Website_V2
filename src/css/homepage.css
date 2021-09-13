@@ -263,8 +263,43 @@ img {
     grid-row-start: 2;
     grid-column-end: 4;
     grid-row-end: 2;
+    padding: 20px;
     background-color: transparent;
     border: var(--theme-day-night-border);
+}
+
+.LiveTime {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.TimeTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--theme-font-regular), var(--theme-font-fallback);
+}
+
+.DayTab {
+    color: var(--theme-day-night-foreground);
+}
+
+.TimeHour {
+    width: fit-content;
+    height: fit-content;
+    color: var(--theme-day-night-foreground);
+    font-size: 75px;
+}
+
+.TimeMinutes {
+    width: fit-content;
+    height: fit-content;
+    color: #d0d0d0;
+    font-size: 75px;
 }
 
 .Row3Column1 {
@@ -385,6 +420,22 @@ img {
         ". . . ."; 
 }
 
+.ContactGrid {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 5;
+    grid-row-end: 5;
+    padding: 25px;
+    background-color: transparent;
+}
+
+.ContactFooter {
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-day-night-foreground);
+    border-radius: 25px;
+}
+
 @media only screen and (max-width:200px) {
     body {
         background-color: #000000;
@@ -394,18 +445,20 @@ img {
 @media only screen and (max-width:700px) and (min-width: 250px) {
     li {
         font-size: calc(var(--theme-responsive-size)*0.5);
-        padding-bottom: 20px;
     }
     .NavBar {
         height: calc(var(--theme-responsive-size)*3.25);
     }
     .ulFooter {
         flex-direction: column;
-        justify-content: end;
+        justify-content: flex-end;
     }
     /* #ulFooterRLeft {
         margin-left: 6.5%;
     } */
+    #LIFooter {
+        padding-bottom: 20px;
+    }
 
     #ulFooterRight {
         margin-right: 6.5%;

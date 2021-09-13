@@ -58,7 +58,7 @@
         <ul class="ulNavBar">
             <li><a id="href" onClick="document.getElementById('containerLanding').scrollIntoView();">Home</a></li>
             <li><a id="href" onClick="document.getElementById('containerProjects').scrollIntoView();">Projects</a></li>
-            <li><a href="/about" id="href">About</a></li>
+            <li><a href="./fallback.html" id="href">About</a></li>
             <li><a id="href" onClick="document.getElementById('containerContactMe').scrollIntoView();">Contact Me</a>
             </li>
         </ul>
@@ -108,7 +108,19 @@
             <div class="News" id="News"></div>
         </div>
         <div class="Row2Column4">
-
+            <div class="LiveTime" id="LiveTime">
+            <div class="TimeTitle" id="TimeTitle">
+                <div class="DayTab" id="DayTab">
+                    09/13    Mon
+                </div>
+                <div class="TimeHour" id="TimeHour">
+                    20
+                </div>
+                <div class="TimeMinutes" id="TimeMinutes">
+                    30
+                </div>
+            </div>
+        </div>
         </div>
 
         <!-- ROW 3... -->
@@ -208,6 +220,7 @@
         </div>
     </div>
     <div class="containerContactMe" id="containerContactMe">
+        <div class="ContactGrid"><div class="ContactFooter" id="ContactFooter"></div></div>
     </div>
     <script src="js/homepage.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -216,6 +229,7 @@
         var timeInHour = today.getHours();
 
         if (timeInHour >= 19 || timeInHour < 5) {
+            document.getElementById("TimeMinutes").style.color = "#353535";
             $(document).ready(function () {
                 $("a").hover(function () {
                     $(this).css("color", "#ffffff");

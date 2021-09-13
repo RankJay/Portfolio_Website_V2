@@ -4,9 +4,14 @@ window.onload = function() {
     var attentionMessage1 = 'Awee...Come Back!';
     var attentionMessage2 = 'Psssss....';
     var blinkEvent = null;
+    var dayMapper = {"1": "Mon", "2": "Tue", "3":"Wed", "4": "Thu", "5": "fri", "6": "Sat", "7": "Sun"}
     var today = new Date();
     var timeInHour = today.getHours();
-    console.log(timeInHour)
+    var timeInMinutes = today.getMinutes();
+    var Day = today.getDay();
+    document.getElementById("TimeHour").innerHTML = timeInHour;
+    document.getElementById("TimeMinutes").innerHTML = timeInMinutes > 9 ? timeInMinutes : '0' + timeInMinutes;
+    document.getElementById("DayTab").innerHTML = dayMapper[Day];
 
     if (timeInHour >= 19 || timeInHour < 5) {
         var HREF = document.getElementById('href');
