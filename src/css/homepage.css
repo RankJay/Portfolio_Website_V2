@@ -130,6 +130,48 @@ img {
     z-index: 10;
 }
 
+.Testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-row-start: 4;
+    grid-column-end: 5;
+    grid-row-end: 4;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.TestimonialSlider {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column-start: 1;
+    grid-row-start: 4;
+    grid-column-end: 5;
+    grid-row-end: 4;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+}
+
+.TestimonialEntry {
+    width: 250px;
+    height: 100px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--theme-day-night-foreground);
+    color: var(--theme-day-night-background);
+    text-align: center;
+    font-family: var(--theme-font-regular), var(--theme-font-fallback);
+}
+
 #ulFooterLeft {
     margin-left: 1%;
 }
@@ -153,8 +195,30 @@ img {
     grid-row-start: 1;
     grid-column-end: 2;
     grid-row-end: 1;
+    padding: 20px;
     background-color: transparent;
     border: var(--theme-day-night-border);
+}
+
+.NameTile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.FirstName {
+    color: #888888;
+    font-family: var(--theme-font-regular), var(--theme-font-fallback);
+    font-size: calc(var(--theme-responsive-size));
+}
+
+.LastName {
+    color: var(--theme-day-night-foreground);
+    font-family: var(--theme-font-regular), var(--theme-font-fallback);
+    font-size: calc(var(--theme-responsive-size));
 }
 
 .Row1Column3 {
@@ -162,8 +226,52 @@ img {
     grid-row-start: 1;
     grid-column-end: 3;
     grid-row-end: 1;
+    padding: 20px;
     background-color: transparent;
     border: var(--theme-day-night-border);
+}
+
+.LiveTile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.DateDayTime {
+    display: flex;
+    flex-direction: row;
+    height: 62px;
+    justify-content: space-between;
+    background-color: transparent;
+    font-family: var(--theme-font-regular), var(--theme-font-fallback);
+}
+
+.Time {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    justify-content: center;
+    color: var(--theme-day-night-foreground);
+    font-size: 72px;
+}
+
+.DayAndDate {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 25px;
+}
+
+.Date {
+    color: var(--theme-day-night-foreground);
+}
+
+.Day {
+    color: #888888;
 }
 
 .Row1Column4 {
@@ -259,47 +367,51 @@ img {
 }
 
 .Row2Column4 {
+    display: flex;
+    flex-direction: column;
     grid-column-start: 4;
     grid-row-start: 2;
     grid-column-end: 4;
     grid-row-end: 2;
+    justify-content: center;
     padding: 20px;
     background-color: transparent;
     border: var(--theme-day-night-border);
 }
 
-.LiveTime {
+.LiveWhether {
     display: flex;
+    height: 90%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    border-radius: 20px;
+    background-color: var(--theme-day-night-foreground);
 }
 
-.TimeTitle {
+.Whether {
+    /* width: fit-content;
+    height: fit-content; */
+    color: var(--theme-day-night-background);
+    font-size: 75px;
+}
+
+.WhetherTitle {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--theme-day-night-background);
     font-family: var(--theme-font-regular), var(--theme-font-fallback);
 }
 
-.DayTab {
-    color: var(--theme-day-night-foreground);
-}
-
-.TimeHour {
-    width: fit-content;
-    height: fit-content;
-    color: var(--theme-day-night-foreground);
-    font-size: 75px;
-}
-
-.TimeMinutes {
-    width: fit-content;
-    height: fit-content;
-    color: #d0d0d0;
-    font-size: 75px;
+.WhetherNotes {
+    /* width: fit-content;
+    height: fit-content; */
+    margin-top: 20px;
+    color: #5a685d;
+    font-family: Alliance-No1-Bold;
+    /* font-size: 75px; */
 }
 
 .Row3Column1 {
@@ -317,8 +429,22 @@ img {
     grid-row-start: 3;
     grid-column-end: 2;
     grid-row-end: 3;
+    padding: 20px;
     background-color: transparent;
     border: var(--theme-day-night-border);
+}
+
+.HeadlineTile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.HeadlineShowcase {
+    color: var(--theme-day-night-foreground);
+    font-family: var(--theme-font-regular), var(--theme-font-fallback);
 }
 
 .Row3Column3 {
@@ -326,6 +452,7 @@ img {
     grid-row-start: 3;
     grid-column-end: 3;
     grid-row-end: 3;
+    padding: 20px;
     background-color: transparent;
     border: var(--theme-day-night-border);
 }
@@ -388,6 +515,44 @@ img {
         ". . . ."
         ". . . ."
         ". . . ."; 
+}
+
+.Enlightenment {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.QuoteText {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    padding-left: 0px;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: end;
+    font-family: Alliance-No1-Bold, var(--theme-font-fallback);
+}
+
+.QuotePlaceholder {
+    max-width: auto;
+    height: fit-content;
+    color: var(--theme-day-night-foreground);
+    font-size: calc(var(--theme-responsive-size)*1.3);
+}
+
+.QuoteImage {
+    width: 100%;
+    padding: 20px;
+    font-family: var(--theme-font-regular), var(--theme-font-fallback);
+}
+
+.ImagePlaceholder {
+    height: 100%;
+    border-radius: 20px;
+    background-color: var(--theme-day-night-foreground);
 }
 
 .containerProjects {
@@ -453,6 +618,10 @@ img {
         flex-direction: column;
         justify-content: flex-end;
     }
+
+    .Testimonial {
+        display: none;
+    }
     /* #ulFooterRLeft {
         margin-left: 6.5%;
     } */
@@ -471,17 +640,39 @@ img {
     .Row2Column3 {
         display: none;
     }
+    .LiveTile {
+        display: none;
+    }
     .Row2Column2 {
         grid-column-end: 4;
     }
-
     .ShowcaseTitle {
         margin-top: calc(var(--theme-responsive-size)*15);
+    }
+    .LiveWhether {
+        border-radius: 0px;
+        background-color: transparent;
+    }
+    .Whether, .WhetherTitle {
+        color: var(--theme-day-night-foreground);
+    }
+
+    .QuotePlaceholder {
+        font-size: calc(var(--theme-responsive-size)*1.75);
+    }
+    .QuoteImage {
+        display: none;
     }
 }
 
 @media only screen and (max-width:1100px) and (min-width: 700px) {
-
+    .LiveWhether {
+        border-radius: 0px;
+        background-color: transparent;
+    }
+    .Whether, .WhetherTitle {
+        color: var(--theme-day-night-foreground);
+    }
 }
 
 /* SCROLLBAR */

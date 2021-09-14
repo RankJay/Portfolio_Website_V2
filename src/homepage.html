@@ -54,14 +54,14 @@
 <body id="bodyNightTheme"">
     <!-- CUSTOM CURSOR-->
     <!-- your content here... -->
-    <div class="NavBar" id="NavBar">
-        <ul class="ulNavBar">
-            <li><a id="href" onClick="document.getElementById('containerLanding').scrollIntoView();">Home</a></li>
-            <li><a id="href" onClick="document.getElementById('containerProjects').scrollIntoView();">Projects</a></li>
-            <li><a href="./fallback.html" id="href">About</a></li>
-            <li><a id="href" onClick="document.getElementById('containerContactMe').scrollIntoView();">Contact Me</a>
-            </li>
-        </ul>
+    <div class=" NavBar" id="NavBar">
+    <ul class="ulNavBar">
+        <li><a id="href" onClick="document.getElementById('containerLanding').scrollIntoView();">Home</a></li>
+        <li><a id="href" onClick="document.getElementById('containerProjects').scrollIntoView();">Projects</a></li>
+        <li><a href="./fallback.html" id="href">About</a></li>
+        <li><a id="href" onClick="document.getElementById('containerContactMe').scrollIntoView();">Contact Me</a>
+        </li>
+    </ul>
     </div>
     <div class="Footer" id="Footer">
         <ul class="ulFooter" id="ulFooterLeft">
@@ -81,15 +81,37 @@
         </ul>
     </div>
     <div class="containerLanding" id="containerLanding">
+        <div class="Testimonial" id="Testimonial">
+            <marquee class="TestimonialMarquee" id="TestimonialMarquee" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+            <div class="TestimonialSlider" id="TestimonialSlider">
+                <div class="TestimonialEntry" id="TestimonialEntry">Ahmed Al Balaghi</div>
+                <div class="TestimonialEntry" id="TestimonialEntry">Anupama Rani</div>
+                <div class="TestimonialEntry" id="TestimonialEntry">Divya Nailwal</div>
+                <div class="TestimonialEntry" id="TestimonialEntry">Dishant Pandya</div>
+                <div class="TestimonialEntry" id="TestimonialEntry">Sachin Tomar</div>
+            </div>
+            </marquee>
+        </div>
         <!-- ROW 1... -->
         <div class="Row1Column1">
 
         </div>
         <div class="Row1Column2">
-
+            <div class="NameTile" id="NameTile">
+                <div class="FirstName" id="FirstName">Jay</div>
+                <div class="LastName" id="LastName">Rank</div>
+            </div>
         </div>
         <div class="Row1Column3">
-
+            <div class="LiveTile" id="LiveTile">
+                <div class="DateDayTime">
+                    <div class="Time" id="Time">14:59</div>
+                    <div class="DayAndDate" id="DayAndDate">
+                        <div class="Date" id="Date">14 Sep. 2021</div>
+                        <div class="Day" id="Day">Tuesday</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="Row1Column4">
 
@@ -108,19 +130,19 @@
             <div class="News" id="News"></div>
         </div>
         <div class="Row2Column4">
-            <div class="LiveTime" id="LiveTime">
-            <div class="TimeTitle" id="TimeTitle">
-                <div class="DayTab" id="DayTab">
-                    09/13    Mon
-                </div>
-                <div class="TimeHour" id="TimeHour">
-                    20
-                </div>
-                <div class="TimeMinutes" id="TimeMinutes">
-                    30
+            <div class="LiveWhether" id="LiveWhether">
+                <div class="WhetherTitle" id="WhetherTitle">
+                    <div class="Whether" id="Whether">
+                        22
+                    </div>
+                    <div class="WhetherTitle" id="WhetherTitle">
+                        Cloudy
+                    </div>
+                    <div class="WhetherNotes" id="WhetherNotes">
+                        AQI 46
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <!-- ROW 3... -->
@@ -128,10 +150,26 @@
 
         </div>
         <div class="Row3Column2">
-
+            <div class="HeadlineTile" id="HeadlineTile">
+                <div class="HeadlineShowcase" id="HeadlineShowcase">
+                    <marquee direction"left" onmouseover="this.stop()" onmouseout="this.start()">
+                        <!-- Quartile, in itself, is an embedded solution to those new emerging artists who are finding their way into web3 space and calibrating a revenue stream out of markets. -->
+                        Engineering Researcher (Smart Village Movement) @UC Berkeley HAAS School Of Business · Full
+                        Stack Blockchain Developer @Timeswap · UI/UX Developer @Biconomy · iGE, Ahmedabad Chapter
+                        @AIESEC
+                    </marquee>
+                </div>
+            </div>
         </div>
         <div class="Row3Column3">
-
+            <div class="HeadlineTile" id="HeadlineTile">
+                <div class="HeadlineShowcase" id="HeadlineShowcase">
+                    <marquee direction"left" onmouseover="this.stop()" onmouseout="this.start()">
+                        KERNEL KB3 Fellow · Google Developer Students Club Lead · Github Campus Expert · Microsoft Learn
+                        Student Ambassador - Beta · Ethereum India Fellow @Devfolio
+                    </marquee>
+                </div>
+            </div>
         </div>
         <div class="Row3Column4">
 
@@ -156,7 +194,15 @@
 
         </div>
         <div class="Row1Column2">
-
+            <div class="Enlightenment" id="Enlightenment">
+                <div class="QuoteText">
+                    <div class="QuotePlaceholder" id="QuotePlaceholder">When you have exhausted all possibilities,
+                        remember this - you haven't.</div>
+                </div>
+                <div class="QuoteImage" id="QuoteImage">
+                    <div class="ImagePlaceholder" id="ImagePlaceholder"></div>
+                </div>
+            </div>
         </div>
         <div class="Row1Column3">
 
@@ -220,7 +266,9 @@
         </div>
     </div>
     <div class="containerContactMe" id="containerContactMe">
-        <div class="ContactGrid"><div class="ContactFooter" id="ContactFooter"></div></div>
+        <div class="ContactGrid">
+            <div class="ContactFooter" id="ContactFooter"></div>
+        </div>
     </div>
     <script src="js/homepage.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -230,6 +278,7 @@
 
         if (timeInHour >= 19 || timeInHour < 5) {
             document.getElementById("TimeMinutes").style.color = "#353535";
+            document.getElementById("Day").style.color = "#353535";
             $(document).ready(function () {
                 $("a").hover(function () {
                     $(this).css("color", "#ffffff");
