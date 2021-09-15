@@ -24,6 +24,7 @@ window.onload = function() {
         // Showcase.style["background-color"] = "#1e1e26";
         // News.style["background-color"] = "#1e1e26";
         document.documentElement.style.setProperty('--theme-responsive-color', 'rgba(255, 255, 255, 0.05)');
+        document.documentElement.style.setProperty('--theme-extra-color', '#16161c');
         document.documentElement.style.setProperty('--theme-day-night-background', '#0F0F13');
         document.documentElement.style.setProperty('--theme-day-night-foreground', '#ffffff');
         document.documentElement.style.setProperty('--theme-day-night-filter', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(126deg) brightness(105%) contrast(104%)');

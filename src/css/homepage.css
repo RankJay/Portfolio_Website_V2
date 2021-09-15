@@ -30,6 +30,7 @@
     --theme-day-night-foreground: #0F0F13;
     --theme-day-night-filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(97%) contrast(103%);
     --theme-responsive-color: rgba(15, 15, 19, 0.05);
+    --theme-extra-color: #ffffff;
     --theme-font-regular: Alliance-No1-SemiBold;
     --theme-font-fallback: Poppins-Regular;
     --theme-day-night-border: 0.5px solid var(--theme-responsive-color);
@@ -396,6 +397,16 @@ marquee {
     border: var(--theme-day-night-border);
 }
 
+.LandingRow3Column2 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-column-end: 2;
+    grid-row-end: 3;
+    padding: 20px;
+    background-color: transparent;
+    border: var(--theme-day-night-border);
+}
+
 .HeadlineTile {
     display: flex;
     flex-direction: column;
@@ -419,7 +430,26 @@ marquee {
     border: var(--theme-day-night-border);
 }
 
+.LandingRow3Column3 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    grid-column-end: 3;
+    grid-row-end: 3;
+    padding: 20px;
+    background-color: transparent;
+    border: var(--theme-day-night-border);
+}
+
 .Row3Column4 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+    grid-column-end: 4;
+    grid-row-end: 3;
+    background-color: transparent;
+    border: var(--theme-day-night-border);
+}
+
+.LandingRow3Column4 {
     grid-column-start: 4;
     grid-row-start: 3;
     grid-column-end: 4;
@@ -557,7 +587,7 @@ marquee {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 0px calc(var(--theme-response-helper)*1.75) #0000000e;
-    background-color: var(--theme-day-night-background);
+    background-color: var(--theme-extra-color);
     color: var(--theme-day-night-foreground);
     font-family: var(--theme-font-regular), var(--theme-font-fallback);
     z-index: 9;
@@ -624,6 +654,83 @@ marquee {
         ". . . ."
         ". . . ."
         ". . . ."; 
+}
+
+.Project1 {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--theme-day-night-foreground);
+    font-family: Alliance-No1-Bold;
+    font-size: calc(var(--theme-responsive-size)*2.5);
+}
+
+.Project2 {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-column-end: 3;
+    grid-row-end: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #16161c;
+    font-family: Alliance-No1-Bold;
+    font-size: calc(var(--theme-responsive-size)*2.5);
+}
+
+.Overlay {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Gradient {
+    /* background: url("https://uploads-ssl.webflow.com/5ec207a448d573153616868a/60e32bd3c049b49481caa4b2_Mesh%2017.jpg"); */
+    background-image:#00ff95;background-image:  
+    radial-gradient(at 67% 54%, hsla(200,100%,50%,1) 0, transparent 44%),  
+    radial-gradient(at 64% 97%, hsla(239,100%,50%,1) 0, transparent 47%),  
+    radial-gradient(at 52% 76%, hsla(333,100%,50%,1) 0, transparent 45%),  
+    radial-gradient(at 34% 21%, hsla(48,100%,80%,1) 0, transparent 52%),  
+    radial-gradient(at 42% 74%, hsla(23,100%,50%,1) 0, transparent 56%),  
+    radial-gradient(at 90% 12%, hsla(173,100%,50%,1) 0, transparent 57%),  
+    radial-gradient(at 5% 71%, hsla(336,100%,50%,1) 0, transparent 46%);
+    background-size: 100% 100%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
 }
 
 .containerContactMe {
@@ -693,11 +800,15 @@ marquee {
         bottom: 0;
         margin: 2%;
     }
-    .LandingRow2Column3 {
+    .LandingRow2Column3, .LandingRow3Column3, .LandingRow3Column4 {
         display: none;
     }
     .LiveTile {
         display: none;
+    }
+
+    .Project1, .Project2 {
+        font-size: 20px;
     }
 
     .Time, .Date, .Day {
@@ -705,6 +816,10 @@ marquee {
     }
     .LandingRow2Column2 {
         grid-column-end: 4;
+    }
+
+    .LandingRow3Column2 {
+        grid-column-end: 5;
     }
     .ShowcaseTitle {
         margin-top: calc(var(--theme-responsive-size)*15);
