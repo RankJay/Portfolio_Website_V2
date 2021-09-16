@@ -53,6 +53,7 @@ window.onload = function() {
         // bodyNightTheme.style["background-color"] = "#0F0F13";
         // Showcase.style["background-color"] = "#1e1e26";
         // News.style["background-color"] = "#1e1e26";
+        // document.querySelector('meta[itemprop="image"]').setAttribute(content="");
         document.documentElement.style.setProperty('--theme-responsive-color', 'rgba(255, 255, 255, 0.05)');
         document.documentElement.style.setProperty('--theme-extra-color', '#16161c');
         document.documentElement.style.setProperty('--theme-day-night-background', '#0F0F13');
