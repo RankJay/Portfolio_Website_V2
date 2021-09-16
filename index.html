@@ -6,56 +6,355 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="Jay Rank, portfolio, resume, curriculum, vitae, projects, Full, Stack, Web, Blockchain, Developer, Researcher, ui, ux, github, campus, expert, microsoft, learn, student, ambassador">
+    <meta name="keywords"
+        content="Jay Rank, portfolio, resume, curriculum, vitae, projects, Full, Stack, Web, Blockchain, Developer, Researcher, ui, ux, github, campus, expert, microsoft, learn, student, ambassador">
 
     <title>Jay Rank | Portfolio</title>
-    <meta name="description" content="Prev. Full Stack Blockchain Developer @Timeswap @Timeswap | @Gitcoin KERNEL KB3 Fellow | @Devfolio Ethereum India Fellow 2.0 | Developer Student Clubs Lead at PDEU | GitHub Campus Expert | MSFT Learn Student Ambassador - Beta | Facebook PyTorch Scholar">
+    <meta name="description"
+        content="Prev. Full Stack Blockchain Developer @Timeswap | @Gitcoin KERNEL KB3 Fellow | @Devfolio Ethereum India Fellow 2.0 | Developer Student Clubs Lead at PDEU | GitHub Campus Expert | MSFT Learn Student Ambassador - Beta | Facebook PyTorch Scholar">
     <meta name="author" content="Jay Rank">
 
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Jay Rank | Portfolio">
-    <meta itemprop="description" content="Prev. Full Stack Blockchain Developer @Timeswap @Timeswap | @Gitcoin KERNEL KB3 Fellow | @Devfolio Ethereum India Fellow 2.0 | Developer Student Clubs Lead at PDEU | GitHub Campus Expert | MSFT Learn Student Ambassador - Beta | Facebook PyTorch Scholar">
-    <meta itemprop="image" content="https://raw.githubusercontent.com/RankJay/Portfolio_Website_V2/master/image.png?token=AMZJRVKKJLBSLGUJGX3A6WTBIINUC">
+    <meta itemprop="description"
+        content="Prev. Full Stack Blockchain Developer @Timeswap | @Gitcoin KERNEL KB3 Fellow | @Devfolio Ethereum India Fellow 2.0 | Developer Student Clubs Lead at PDEU | GitHub Campus Expert | MSFT Learn Student Ambassador - Beta | Facebook PyTorch Scholar">
+    <meta itemprop="image"
+        content="https://raw.githubusercontent.com/RankJay/Portfolio_Website_V2/master/image.png?token=AMZJRVKKJLBSLGUJGX3A6WTBIINUC">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:title" content="Jay Rank | Portfolio">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
-    <meta property="og:description" content="Prev. Full Stack Blockchain Developer @Timeswap @Timeswap | @Gitcoin KERNEL KB3 Fellow | @Devfolio Ethereum India Fellow 2.0 | Developer Student Clubs Lead at PDEU | GitHub Campus Expert | MSFT Learn Student Ambassador - Beta | Facebook PyTorch Scholar">
-    <meta property="og:image" content="https://raw.githubusercontent.com/RankJay/Portfolio_Website_V2/master/image.png?token=AMZJRVKKJLBSLGUJGX3A6WTBIINUC">
-    
+    <meta property="og:description"
+        content="Prev. Full Stack Blockchain Developer @Timeswap | @Gitcoin KERNEL KB3 Fellow | @Devfolio Ethereum India Fellow 2.0 | Developer Student Clubs Lead at PDEU | GitHub Campus Expert | MSFT Learn Student Ambassador - Beta | Facebook PyTorch Scholar">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/RankJay/Portfolio_Website_V2/master/image.png?token=AMZJRVKKJLBSLGUJGX3A6WTBIINUC">
+
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="">
     <meta name="twitter:title" content="Jay Rank | Portfolio">
-    <meta name="twitter:description" content="Prev. Full Stack Blockchain Developer @Timeswap @Timeswap | @Gitcoin KERNEL KB3 Fellow | @Devfolio Ethereum India Fellow 2.0 | Developer Student Clubs Lead at PDEU | GitHub Campus Expert | MSFT Learn Student Ambassador - Beta | Facebook PyTorch Scholar">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/RankJay/Portfolio_Website_V2/master/image.png?token=AMZJRVKKJLBSLGUJGX3A6WTBIINUC">
+    <meta name="twitter:description"
+        content="Prev. Full Stack Blockchain Developer @Timeswap | @Gitcoin KERNEL KB3 Fellow | @Devfolio Ethereum India Fellow 2.0 | Developer Student Clubs Lead at PDEU | GitHub Campus Expert | MSFT Learn Student Ambassador - Beta | Facebook PyTorch Scholar">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/RankJay/Portfolio_Website_V2/master/image.png?token=AMZJRVKKJLBSLGUJGX3A6WTBIINUC">
     <meta name="twitter:creator" content="@RankJay1">
 
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="./src/assets/favicon.ico">
     <!-- <link rel="icon" href="" type="image/svg+xml"> -->
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="manifest" href="">
     <link rel="apple-touch-icon" href="">
 
-    <link href="src/css/index.css" rel="stylesheet">
-    <link href="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.css" rel="stylesheet">
+    <link href="./src/css/index.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.css" rel="stylesheet"> -->
 
 </head>
 
-<body>
+<body id="bodyNightTheme"">
     <!-- CUSTOM CURSOR-->
     <!-- your content here... -->
-    <div class='Landing'>
-        <div class='Header'>
-            <div class = 'Name'>Error 404</div>
-            <div class = 'Description'>Welcome to my Portfolio Website</div>
+    <div class=" NavBar" id="NavBar">
+    <ul class="ulNavBar">
+        <li><a id="href" onClick="document.getElementById('containerLanding').scrollIntoView();">Home</a></li>
+        <li><a id="href" onClick="document.getElementById('containerProjects').scrollIntoView();">Projects</a></li>
+        <li><a href="./src/fallback.html" id="href">About</a></li>
+        <li><a id="href" onClick="document.getElementById('containerContactMe').scrollIntoView();">Contact Me</a>
+        </li>
+    </ul>
+    </div>
+    <div class="Footer" id="Footer">
+        <ul class="ulFooter" id="ulFooterLeft">
+            <li id="LIFooter"><a href="https://www.behance.net/jayrank" target="_blank"><img class="social-medias"
+                        src="./src/assets/behance.svg"></a></li>
+            <li id="LIFooter"><a href="https://github.com/RankJay" target="_blank"><img class="social-medias"
+                        src="./src/assets/github.svg"></a></li>
+            <li id="LIFooter"><a href="https://twitter.com/RankJay1" target="_blank"><img class="social-medias"
+                        src="./src/assets/twitter.svg"></a></li>
+            <li id="LIFooter"><a href="https://www.instagram.com/rank_jay/" target="_blank"><img class="social-medias"
+                        src="./src/assets/instagram.svg"></a></li>
+        </ul>
+        <ul class="ulFooter" id="ulFooterRight">
+            <li id="LIFooter"><a href=""><img class="social-medias" src="./src/assets/theme.svg"
+                        onclick="activateNightTheme()"></a></li>
+            <li id="LIFooter"><a href="./src/fallback.html"><img class="social-medias" src="./src/assets/share.svg"></a></li>
+        </ul>
+    </div>
+    <div class="containerLanding" id="containerLanding">
+        <!-- ROW 1... -->
+        <div class="Row1Column1">
+
+        </div>
+        <div class="Row1Column2">
+            <div class="NameTile" id="NameTile">
+                <div class="FirstName" id="FirstName">Jay</div>
+                <div class="LastName" id="LastName">Rank</div>
+            </div>
+        </div>
+        <div class="Row1Column3">
+            <div class="LiveTile" id="LiveTile">
+                <div class="DateDayTime">
+                    <div class="Time" id="Time">14:59</div>
+                    <div class="DayAndDate" id="DayAndDate">
+                        <div class="Date" id="Date">14 Sep. 2021</div>
+                        <div class="Day" id="Day">Tuesday</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Row1Column4">
+
+        </div>
+
+        <!-- ROW 2... -->
+        <div class="Row2Column1">
+
+        </div>
+        <div class="LandingRow2Column2">
+            <div class="ShowcaseTitle" id="ShowcaseTitle">Insied</div>
+            <div class="Showcase" id="Showcase"></div>
+        </div>
+        <div class="LandingRow2Column3">
+            <div class="NewsTitle" id="NewsTitle">GDSC 2020-21</div>
+            <div class="News" id="News"></div>
+        </div>
+        <div class="Row2Column4">
+            <div class="LiveWhether" id="LiveWhether">
+                <div class="WhetherTitle" id="WhetherTitle">
+                    <div class="Whether" id="Whether">
+                        22
+                    </div>
+                    <div class="WhetherTitle" id="WhetherTitle">
+                        Cloudy
+                    </div>
+                    <div class="WhetherNotes" id="WhetherNotes">
+                        AQI 46
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 3... -->
+        <div class="Row3Column1">
+
+        </div>
+        <div class="LandingRow3Column2">
+            <div class="HeadlineTile" id="HeadlineTile">
+                <div class="HeadlineShowcase" id="HeadlineShowcase">
+                    <marquee direction"left" onmouseover="this.stop()" onmouseout="this.start()">
+                        <!-- Quartile, in itself, is an embedded solution to those new emerging artists who are finding their way into web3 space and calibrating a revenue stream out of markets. -->
+                        Engineering Researcher (Smart Village Movement) @UC Berkeley HAAS School Of Business · Full
+                        Stack Blockchain Developer @Timeswap · UI/UX Developer @Biconomy · iGE, Ahmedabad Chapter
+                        @AIESEC
+                    </marquee>
+                </div>
+            </div>
+        </div>
+        <div class="LandingRow3Column3">
+            <div class="HeadlineTile" id="HeadlineTile">
+                <div class="HeadlineShowcase" id="HeadlineShowcase">
+                    <marquee direction"left" onmouseover="this.stop()" onmouseout="this.start()">
+                        KERNEL KB3 Fellow · Google Developer Students Club Lead · Github Campus Expert · Microsoft Learn
+                        Student Ambassador - Beta · Ethereum India Fellow @Devfolio
+                    </marquee>
+                </div>
+            </div>
+        </div>
+        <div class="LandingRow3Column4">
+
+        </div>
+
+        <!-- ROW 4... -->
+        <div class="Row4Column1">
+
+        </div>
+        <div class="Row4Column2">
+
+        </div>
+        <div class="Row4Column3">
+
+        </div>
+        <div class="Row4Column4">
+
         </div>
     </div>
-    <video width="100%" height="100%" autoplay="true" playsinline="" loop="true" muted="">
-        <source src="https://www.dropbox.com/s/1c4q3xsw409euis/background-compressed.mp4?raw=1" type="video/mp4">
-        </video>
-    <script src="src/js/index.js"></script>
+    <div class="containerUnknown" id="containerUnknown">
+        <div class="Testimonial" id="Testimonial">
+            <marquee class="TestimonialMarquee" id="TestimonialMarquee" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+            <div class="TestimonialSlider" id="TestimonialSlider">
+                <div class="TestimonialEntry" id="TestimonialEntry"><div style="margin-bottom: 10px;">Anupama Rani</div><div class="Comments" id="Comments">A good team leader and<div class="Comments" id="Comments">a better team member</div></div></div>
+                <!-- <div class="TestimonialEntry" id="TestimonialEntry">Ameeth Devdas<div class="Comments" id="Comments">Jordar Bhai</div></div> -->
+                <div class="TestimonialEntry" id="TestimonialEntry"><div style="margin-bottom: 10px;">Divya Nailwal</div><div class="Comments" id="Comments">Hardworking and a Quick learner.<div class="Comments" id="Comments">He never hesitates in trying out<div class="Comments" id="Comments">new things, that's his best quality.</div></div></div></div>
+                <div class="TestimonialEntry" id="TestimonialEntry"><div style="margin-bottom: 10px;">Dishant Pandya</div><div class="Comments" id="Comments">Jay is a Golden Triangle of</div><div class="Comments" id="Comments">Intelligence, Diligence and Passion.</div><div class="Comments" id="Comments">Desire to achieve what he wants!</div></div>
+                <!-- <div class="TestimonialEntry" id="TestimonialEntry">Harshita Singh<div class="Comments" id="Comments">Jordar Bhai</div></div> -->
+                <!-- <div class="TestimonialEntry" id="TestimonialEntry">Ricsson Ngo<div class="Comments" id="Comments">Jordar Bhai</div></div> -->
+                <div class="TestimonialEntry" id="TestimonialEntry"><div style="margin-bottom: 10px;">Sachin Tomar</div><div class="Comments" id="Comments">Your creativity and passion for the<div class="Comments" id="Comments">project really made a difference in<div class="Comments" id="Comments">the execution. Keep it up :)</div></div></div></div>
+            </div>
+            </marquee>
+        </div>
+        <div class="Row1Column1">
+
+        </div>
+        <div class="Row1Column2">
+            <div class="TestimonialHeading" id="TestimonialHeading">
+                Testimonials
+            </div>
+        </div>
+        <div class="Row1Column3">
+
+        </div>
+
+        <!-- ROW 2... -->
+        <div class="Row2Column1">
+
+        </div>
+        <div class="Row2Column2">
+            
+        </div>
+        <div class="Row2Column3">
+
+        </div>
+
+        <!-- ROW 3... -->
+        <div class="Row3Column1">
+
+        </div>
+        <div class="Row3Column2">
+            <div class="Enlightenment" id="Enlightenment">
+                <div class="QuoteText">
+                    <div class="QuotePlaceholder" id="QuotePlaceholder">When you have exhausted all possibilities,
+                        remember this - you haven't.</div>
+                </div>
+                <div class="QuoteImage" id="QuoteImage">
+                    <div class="ImagePlaceholder" id="ImagePlaceholder"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Row3Column3">
+
+        </div>
+    </div>
+    <div class="containerProjects" id="containerProjects">
+        <div class="Project1">
+            Projects
+        </div>
+        <div class="Project2" id="Project2">
+            <div class="Overlay">
+            <div>That&nbsp;</div>
+            <div class="Gradient">Matters</div>
+        </div>
+        </div>
+        <!-- ROW 1... -->
+        <div class="Row1Column1">
+
+        </div>
+        <div class="Row1Column2">
+
+        </div>
+        <div class="Row1Column3">
+
+        </div>
+        <div class="Row1Column4">
+
+        </div>
+
+        <!-- ROW 2... -->
+        <div class="Row2Column1">
+
+        </div>
+        <div class="Row2Column2">
+
+        </div>
+        <div class="Row2Column3">
+
+        </div>
+        <div class="Row2Column4">
+
+        </div>
+
+        <!-- ROW 3... -->
+        <div class="Row3Column1">
+
+        </div>
+        <div class="Row3Column2">
+
+        </div>
+        <div class="Row3Column3">
+
+        </div>
+        <div class="Row3Column4">
+
+        </div>
+
+        <!-- ROW 4... -->
+        <div class="Row4Column1">
+
+        </div>
+        <div class="Row4Column2">
+
+        </div>
+        <div class="Row4Column3">
+
+        </div>
+        <div class="Row4Column4">
+
+        </div>
+    </div>
+    <div class="containerContactMe" id="containerContactMe">
+        <div class="ContactGrid">
+            <div class="ContactFooter" id="ContactFooter">
+                <div class="ContactHeading" id="ContactHeading">
+                    Get in touch!
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./src/js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var today = new Date();
+        var timeInHour = today.getHours();
+
+        if (timeInHour >= 19 || timeInHour < 5) {
+            // document.getElementById("TimeMinutes").style.color = "#353535";
+            document.getElementById("Project2").style.color = "#1e1e25";
+            document.getElementById("Day").style.color = "#353535";
+            $(document).ready(function () {
+                $("a").hover(function () {
+                    $(this).css("color", "#ffffff");
+                }, function () {
+                    $(this).css("color", "#888888");
+                });
+            });
+        }
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("NavBar").style.height = "height: calc(var(--theme-responsive-size)*1.75)";
+                document.getElementById("NavBar").style["backdrop-filter"] = "blur(50px)";
+            } else {
+                document.getElementById("NavBar").style.height = "calc(var(--theme-responsive-size)*2.25)";
+                document.getElementById("NavBar").style["backdrop-filter"] = "blur(0px)";
+            }
+        }
+
+        function activateNightTheme() {
+            var HREF = document.getElementById('href');
+            HREF.style["color"] = "#888888";
+            // var bodyNightTheme = document.getElementById('bodyNightTheme');
+            // var Showcase = document.getElementById('Showcase');
+            // var News = document.getElementById('News');
+            // bodyNightTheme.style["background-color"] = "#0F0F13";
+            // Showcase.style["background-color"] = "#1e1e26";
+            // News.style["background-color"] = "#1e1e26";
+            document.documentElement.style.setProperty('--theme-responsive-color', 'rgba(255, 255, 255, 0.05)');
+            document.documentElement.style.setProperty('--theme-day-night-background', '#0F0F13');
+            document.documentElement.style.setProperty('--theme-day-night-foreground', '#ffffff');
+            document.documentElement.style.setProperty('--theme-day-night-filter', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(126deg) brightness(105%) contrast(104%)');
+        }
+    </script>
     <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.js"></script> -->
 </body>
