@@ -19,7 +19,7 @@
     <meta itemprop="description"
         content="Prev. Full Stack Blockchain Developer @Timeswap | @Gitcoin KERNEL KB3 Fellow | @Devfolio Ethereum India Fellow 2.0 | Developer Student Clubs Lead at PDEU | GitHub Campus Expert | MSFT Learn Student Ambassador - Beta | Facebook PyTorch Scholar">
     <meta itemprop="image"
-        content="https://raw.githubusercontent.com/RankJay/Portfolio_Website_V2/master/src/assets/metaDay.png?token=AMZJRVKA7MG274QTENVYXJLBJVYI4">
+        content="<%= require('./src/assets/metaNight.png') %>">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:title" content="Jay Rank | Portfolio">
@@ -28,7 +28,7 @@
     <meta property="og:description"
         content="Prev. Full Stack Blockchain Developer @Timeswap | @Gitcoin KERNEL KB3 Fellow | @Devfolio Ethereum India Fellow 2.0 | Developer Student Clubs Lead at PDEU | GitHub Campus Expert | MSFT Learn Student Ambassador - Beta | Facebook PyTorch Scholar">
     <meta property="og:image"
-        content="https://raw.githubusercontent.com/RankJay/Portfolio_Website_V2/master/src/assets/metaDay.png?token=AMZJRVKA7MG274QTENVYXJLBJVYI4">
+        content="<%= require('./src/assets/metaNight.png') %>">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -37,7 +37,7 @@
     <meta name="twitter:description"
         content="Prev. Full Stack Blockchain Developer @Timeswap | @Gitcoin KERNEL KB3 Fellow | @Devfolio Ethereum India Fellow 2.0 | Developer Student Clubs Lead at PDEU | GitHub Campus Expert | MSFT Learn Student Ambassador - Beta | Facebook PyTorch Scholar">
     <meta name="twitter:image"
-        content="https://raw.githubusercontent.com/RankJay/Portfolio_Website_V2/master/src/assets/metaDay.png?token=AMZJRVKA7MG274QTENVYXJLBJVYI4">
+        content="<%= require('./src/assets/metaNight.png') %>">
     <meta name="twitter:creator" content="@RankJay1">
 
     <link rel="icon" href="./src/assets/favicon.ico">
@@ -65,19 +65,19 @@
     </div>
     <div class="Footer" id="Footer">
         <ul class="ulFooter" id="ulFooterLeft">
-            <li id="LIFooter"><a href="https://www.behance.net/jayrank" target="_blank"><img class="social-medias"
-                        src="./src/assets/behance.svg"></a></li>
-            <li id="LIFooter"><a href="https://github.com/RankJay" target="_blank"><img class="social-medias"
-                        src="./src/assets/github.svg"></a></li>
-            <li id="LIFooter"><a href="https://twitter.com/RankJay1" target="_blank"><img class="social-medias"
-                        src="./src/assets/twitter.svg"></a></li>
-            <li id="LIFooter"><a href="https://www.instagram.com/rank_jay/" target="_blank"><img class="social-medias"
-                        src="./src/assets/instagram.svg"></a></li>
+            <li id="LIFooter"><a href="https://www.behance.net/jayrank" target="_blank" rel="noopener"><img class="social-medias"
+                        src="./src/assets/behance.svg" alt="Behance"></a></li>
+            <li id="LIFooter"><a href="https://github.com/RankJay" target="_blank" rel="noopener"><img class="social-medias"
+                        src="./src/assets/github.svg" alt="Github"></a></li>
+            <li id="LIFooter"><a href="https://twitter.com/RankJay1" target="_blank" rel="noopener"><img class="social-medias"
+                        src="./src/assets/twitter.svg" alt="Twitter"></a></li>
+            <li id="LIFooter"><a href="https://www.instagram.com/rank_jay/" target="_blank" rel="noopener"><img class="social-medias"
+                        src="./src/assets/instagram.svg" alt="Instagram"></a></li>
         </ul>
         <ul class="ulFooter" id="ulFooterRight">
-            <li id="LIFooter"><a href=""><img class="social-medias" src="./src/assets/theme.svg"
-                        onclick="activateNightTheme()"></a></li>
-            <li id="LIFooter"><a href="./src/fallback.html"><img class="social-medias" src="./src/assets/share.svg"></a>
+            <li id="LIFooter"><a href="" rel="noopener"><img class="social-medias" src="./src/assets/theme.svg"
+                        onclick="activateNightTheme()" alt="Theme"></a></li>
+            <li id="LIFooter"><a href="./src/fallback.html" rel="noopener"><img class="social-medias" src="./src/assets/share.svg" alt="Share"></a>
             </li>
         </ul>
     </div>
@@ -289,11 +289,18 @@
 
         </div>
         <div class="Row2Column2" id="ProjectRow2Column2">
-            <div class="ProjectTitle" id="ProjectTitle">Cleopatra</div>
-            <div class="Deck" id="Deck"></div>
+            <div class="ProjectLayout" id="ProjectLayout">
+                <div class="ProjectTitle" id="ProjectTitle">Quartile</div>
+                <div class="Deck" id="Deck1"></div>
+            </div>
+            <div class="DeckDescription" id="DD1"><marquee class="projectMarquee" id="projectMarquee">Quartile, in itself, is an embedded solution to those new emerging artists who are finding their way into web3 space and calibrating a revenue stream out of the NFT marketplaces.</marquee></div>
         </div>
         <div class="Row2Column3" id="ProjectRow2Column3">
-
+            <div class="ProjectLayout" id="ProjectLayout">
+                <div class="ProjectTitle" id="ProjectTitle">Cleopatra</div>
+                <div class="Deck" id="Deck2"></div>
+            </div>
+            <div class="DeckDescription" id="DD1"><marquee class="projectMarquee" id="projectMarquee">Cleopatra, at its core, is a multi-purpose Twitter bot that can constantly push forward the user engagement of a decentralized ecosystem.</marquee></div>
         </div>
         <div class="Row2Column4">
 
@@ -317,11 +324,19 @@
         <div class="Row4Column1">
 
         </div>
-        <div class="Row4Column2">
-
+        <div class="Row4Column2" id="ProjectRow4Column2">
+            <div class="ProjectLayout" id="ProjectLayout">
+                <div class="ProjectTitle" id="ProjectTitle" style="color: #0f0f13;">Compresso</div>
+                <div class="Deck" id="Deck3"></div>
+            </div>
+            <div class="DeckDescription" id="DD1"><marquee class="projectMarquee" id="projectMarquee">Save space to save every capture that matters.</marquee></div>
         </div>
-        <div class="Row4Column3">
-
+        <div class="Row4Column3" id="ProjectRow4Column3">
+            <div class="ProjectLayout" id="ProjectLayout">
+                <div class="ProjectTitle" id="ProjectTitle">Mystic</div>
+                <div class="Deck" id="Deck4"></div>
+            </div>
+            <div class="DeckDescription" id="DD1"><marquee class="projectMarquee" id="projectMarquee">Mystic is an open-source project designed to help developers instantly get the most optimized code for their respective intended input and output with additionally providing them with 4 different coding language export namely C, C++, Python and Java</marquee></div>
         </div>
         <div class="Row4Column4">
 
@@ -341,7 +356,7 @@
     <script>
         $(document).ready(function () {
             $.ajax({
-                url: "http://api.openweathermap.org/data/2.5/weather?q=Rajkot,IN&units=metric&appid=1ad8583171cda3dc8631b3c340da31a5",
+                url: "https://api.openweathermap.org/data/2.5/weather?q=Rajkot,IN&units=metric&appid=1ad8583171cda3dc8631b3c340da31a5",
                 type: "GET",
                 success: function (result) {
                     var temp = result['main']['temp'];
