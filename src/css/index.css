@@ -369,6 +369,7 @@ marquee {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: var(--theme-day-night-background);
     font-family: var(--theme-font-regular), var(--theme-font-fallback);
 }
