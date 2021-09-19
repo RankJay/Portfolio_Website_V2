@@ -256,6 +256,18 @@ marquee {
     border: var(--theme-day-night-border);
 }
 
+.version1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--theme-day-night-foreground);
+    color: var(--theme-day-night-background);
+    font-family: var(--theme-font-regular), var(--theme-font-fallback);
+    font-size: 20px;
+}
+
 .LandingRow2Column2 {
     grid-column-start: 2;
     grid-row-start: 2;
@@ -904,7 +916,7 @@ marquee {
         bottom: 0;
         margin: 2%;
     }
-    .LandingRow2Column3, .LandingRow3Column3, .LandingRow3Column4, #ProjectRow2Column3,  #ProjectRow4Column2 {
+    .version1, .LandingRow2Column3, .LandingRow3Column3, .LandingRow3Column4, #ProjectRow2Column3,  #ProjectRow4Column2 {
         display: none;
     }
     .LiveTile {
@@ -950,6 +962,9 @@ marquee {
 }
 
 @media only screen and (max-width:1100px) and (min-width: 850px) {
+    .version1 {
+        display: none;
+    }
     .LiveWhether {
         border-radius: 0px;
         background-color: transparent;
