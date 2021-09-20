@@ -224,7 +224,7 @@ marquee {
 .DayAndDate {
     display: flex;
     flex-direction: column;
-    width: 150px;
+    width: 160px;
     justify-content: flex-end;
     align-items: flex-end;
     font-size: 25px;
