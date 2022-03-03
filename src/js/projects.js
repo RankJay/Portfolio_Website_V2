@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = function() {
 
     var pageTitle = document.title;
     var attentionMessage1 = 'Awee...Come Back!';
@@ -34,15 +34,12 @@ window.onload = function () {
       }
     }
 
-    var dayMapper = { "0": "Sunday", "1": "Monday", "2": "Tuesday", "3": "Wednesday", "4": "Thursday", "5": "Friday", "6": "Saturday" }
-    var MonthMapper = { "1": "January", "2": "February", "3": "March", "4": "April", "5": "May", "6": "June", "7": "July", "8": "August", "9": "September", "10": "October", "11": "November", "12": "December" };
+    var dayMapper = {"0": "Sunday", "1": "Monday", "2": "Tuesday", "3":"Wednesday", "4": "Thursday", "5": "Friday", "6": "Saturday"}
+    var MonthMapper = {"1": "January", "2": "February", "3": "March", "4": "April", "5":"May", "6": "June", "7": "July", "8": "August", "9": "September", "10": "October", "11": "November", "12": "December"};
     var today = new Date();
     var timeInHour = today.getHours();
     var timeInMinutes = today.getMinutes();
     var Day = today.getDay();
-    document.getElementById("Time").innerHTML = (timeInHour > 9 ? timeInHour : '0' + timeInHour) + ":" + (timeInMinutes > 9 ? timeInMinutes : '0' + timeInMinutes);
-    document.getElementById("Date").innerHTML = today.getDate() + " " + (MonthMapper[today.getMonth() + 1].length > 3 ? MonthMapper[today.getMonth() + 1].slice(0, 3) + "." : MonthMapper[today.getMonth() + 1]) + " " + today.getFullYear();
-    document.getElementById("Day").innerHTML = dayMapper[Day];
 
     if (timeInHour >= 19 || timeInHour < 5) {
         var HREF = document.getElementById('href');
@@ -60,72 +57,29 @@ window.onload = function () {
         document.documentElement.style.setProperty('--theme-day-night-foreground', '#ffffff');
         document.documentElement.style.setProperty('--theme-day-night-substitute', '#333333');
         document.documentElement.style.setProperty('--theme-day-night-filter', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(126deg) brightness(105%) contrast(104%)');
-        document.getElementById("Enlightenment").style["font-family"] = "var(--theme-font-regular), var(--theme-font-fallback)"
     }
-
-    document.addEventListener('visibilitychange', function (e) {
+  
+    document.addEventListener('visibilitychange', function(e) {
         var isPageActive = !document.hidden;
-
-        if (!isPageActive) {
+    
+        if(!isPageActive){
             blink();
-        } else {
+        }else {
             document.title = pageTitle;
             clearInterval(blinkEvent);
         }
     });
-
-    function blink() {
-        blinkEvent = setInterval(function () {
-            if (document.title === attentionMessage1) {
+  
+    function blink(){
+        blinkEvent = setInterval(function() {
+            if(document.title === attentionMessage1){
                 document.title = attentionMessage2;
-            } else {
+            }else {
                 document.title = attentionMessage1;
-            }
+          }
         }, 100);
     }
-
-    // (function showcase(i) {
-    //     setTimeout(function () {
-    //         //   document.getElementById("Showcase").style["background-image"] = "url('./src/assets/Deck2.png')";
-    //         //   document.querySelector(".Showcase").style.backgroundSize='cover';
-    //         //   setTimeout(function ba() { 
-    //         //     document.getElementById("Showcase").style["background-image"] = "url('./src/assets/Deck4.png')";
-    //         //     document.querySelector(".Showcase").style.backgroundSize='cover';
-    //         //    }, 3000)();
-    //         //    document.getElementById("Showcase").style["background-image"] = "url('./src/assets/image.png')";
-
-    //         setTimeout(() => { document.getElementById("Showcase").style["background-image"] = "url('./src/assets/Deck2.png')";
-    //         document.getElementById("News").style["background-image"] = "url('./src/assets/Deck2.png')" }, 6000);
-    //         setTimeout(() => { document.getElementById("Showcase").style["background-image"] = "url('./src/assets/Deck4.png')";
-    //         document.getElementById("News").style["background-image"] = "url('./src/assets/Deck4.png')" }, 12000);
-    //         setTimeout(() => { document.getElementById("Showcase").style["background-image"] = "url('./src/assets/image.png')";
-    //         document.getElementById("News").style["background-image"] = "url('./src/assets/image.png')" }, 18000);
-
-    //         console.log('works') //  your code here                
-    //         if (--i) showcase(i);   //  decrement i and call myLoop again if i > 0
-    //     }, 18001)
-
-    // })(10);
 };
-
-function gogo() {
-
-const form = document.getElementById('submitEmail');
-console.log('works')
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    const action = 'https://script.google.com/macros/s/AKfycby3J9UIfjvhzKmEkni1At192RKCqgPsVzpsO9jayI79lDb4hzFw9NbX6F66kDGjvCzb/exec';
-    fetch(action, {
-        method: 'POST',
-        body: data,
-    })
-        .then(() => {
-            alert("Success!");
-        })
-});
-
-}
 
 // async function blurNavBar() {
 //     var NavBar = document.getElementById('NavBar');

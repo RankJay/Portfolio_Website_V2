@@ -56,30 +56,73 @@
     <!-- your content here... -->
     <div class=" NavBar" id="NavBar">
     <ul class="ulNavBar">
-        <li style="cursor: pointer;"><a id="href" onClick="document.getElementById('containerLanding').scrollIntoView();">Home</a></li>
-        <li style="cursor: pointer;"><a id="href" onClick="document.getElementById('containerProjects').scrollIntoView();">Projects</a></li>
-        <li><a href="./src/fallback.html" id="href">About</a></li>
-        <li style="cursor: pointer;"><a id="href" onClick="document.getElementById('containerContactMe').scrollIntoView();">Contact Me</a>
+        <!-- <li style="cursor: pointer;"><a id="href" onClick="document.getElementById('containerLanding').scrollIntoView();">Home</a></li> -->
+        <li style="cursor: pointer;"><a id="href">Home</a></li>
+        <li style="cursor: pointer;"><a href="./src/projects.html" id="href">Projects</a></li>
+        <li style="cursor: pointer;"><a href="./src/about.html" id="href">About</a></li>
+        <li style="cursor: pointer;"><a class="trigger" id="href">Contact Me</a>
         </li>
     </ul>
     </div>
     <div class="Footer" id="Footer">
         <ul class="ulFooter" id="ulFooterLeft">
-            <li id="LIFooter"><a href="https://www.behance.net/jayrank" target="_blank" rel="noopener"><img class="social-medias"
-                        src="./src/assets/behance.svg" alt="Behance"></a></li>
-            <li id="LIFooter"><a href="https://github.com/RankJay" target="_blank" rel="noopener"><img class="social-medias"
-                        src="./src/assets/github.svg" alt="Github"></a></li>
-            <li id="LIFooter"><a href="https://twitter.com/RankJay1" target="_blank" rel="noopener"><img class="social-medias"
-                        src="./src/assets/twitter.svg" alt="Twitter"></a></li>
-            <li id="LIFooter"><a href="https://www.instagram.com/rank_jay/" target="_blank" rel="noopener"><img class="social-medias"
-                        src="./src/assets/instagram.svg" alt="Instagram"></a></li>
+            <li id="LIFooter"><a href="https://www.behance.net/jayrank" target="_blank" rel="noopener"><img
+                        class="social-medias" src="./src/assets/behance.svg" alt="Behance"></a></li>
+            <li id="LIFooter"><a href="https://github.com/RankJay" target="_blank" rel="noopener"><img
+                        class="social-medias" src="./src/assets/github.svg" alt="Github"></a></li>
+            <li id="LIFooter"><a href="https://twitter.com/RankJay1" target="_blank" rel="noopener"><img
+                        class="social-medias" src="./src/assets/twitter.svg" alt="Twitter"></a></li>
+            <li id="LIFooter"><a href="https://www.instagram.com/rank_jay/" target="_blank" rel="noopener"><img
+                        class="social-medias" src="./src/assets/instagram.svg" alt="Instagram"></a></li>
         </ul>
         <ul class="ulFooter" id="ulFooterRight">
             <li id="LIFooter"><a href="" rel="noopener"><img class="social-medias" src="./src/assets/theme.svg"
                         onclick="activateNightTheme()" alt="Theme"></a></li>
-            <li id="LIFooter"><a href="./src/fallback.html" rel="noopener"><img class="social-medias" src="./src/assets/share.svg" alt="Share"></a>
+            <li id="LIFooter"><a href="./src/fallback.html" rel="noopener"><img class="social-medias"
+                        src="./src/assets/share.svg" alt="Share"></a>
             </li>
         </ul>
+    </div>
+    <div class="contactMeModal">
+        <div class="blurBackground"></div>
+        <div class="contactMeModal-content" id="contactMeModal-design2"></div>
+        <div class="contactMeModal-content" id="contactMeModal-design1"></div>
+        <div class="contactMeModal-content"
+            style="background-image: linear-gradient(to bottom right, #ffffff, #e9e9e9);">
+            <span class="close-button">×</span>
+            <h1 style="font-family: Alliance-No1-Bold;">Namaste!</h1>
+            <p style="color: #b3b3b3;">Thank you so much for visiting my portfolio!<br>
+                Now that I have impressed you, send in your email and let's talk about the collaboration.</p>
+            <div class="submitEmail">
+                <div class="submitBar">
+                    <div class="inputEmail">
+                        <form class="inputEmail" id="submitEmail" style="width: 100%;" method="POST"
+                            action="https://script.google.com/macros/s/AKfycbzNvKNHWYSjfZmCkX9Tmr_0yFiLrLmd66UCVi1FFK2CUqgHIuaBF0-vGVpQeMjFa79i/exec">
+                            <input type="text" id="Email" name="Email" placeholder="email address">
+                    </div>
+                    <button class="sendEmail" id="sendEmail" type="submit" onclick="gogo">Send</button>
+                </form>
+                </div>
+                <script>
+                    window.addEventListener("load", function () {
+                        const form = document.getElementById('submitEmail');
+                        form.addEventListener("submit", function (e) {
+                            e.preventDefault();
+                            const data = new FormData(form);
+                            const action = 'https://script.google.com/macros/s/AKfycbzNvKNHWYSjfZmCkX9Tmr_0yFiLrLmd66UCVi1FFK2CUqgHIuaBF0-vGVpQeMjFa79i/exec';
+                            fetch(action, {
+                                method: 'POST',
+                                body: data,
+                                mode: 'no-cors',
+                            })
+                                .then(() => {
+                                    toggleModal();
+                                })
+                        });
+                    });
+                </script>
+            </div>
+        </div>
     </div>
     <div class="containerLanding" id="containerLanding">
         <!-- ROW 1... -->
@@ -109,7 +152,8 @@
 
         <!-- ROW 2... -->
         <div class="Row2Column1">
-            <div class="version1" id="version1"><a style="color: var(--theme-day-night-background);" href="https://jayrank.azurewebsites.net/" target="_blank" rel="noopener">visit v1.0</a></div>
+            <div class="version1" id="version1"><a style="color: var(--theme-day-night-background);"
+                    href="https://jayrank.azurewebsites.net/" target="_blank" rel="noopener">visit v1.0</a></div>
         </div>
         <div class="LandingRow2Column2">
             <div class="ShowcaseTitle" id="ShowcaseTitle">Insied</div>
@@ -144,8 +188,10 @@
                 <div class="HeadlineShowcase" id="HeadlineShowcase">
                     <marquee direction"left" onmouseover="this.stop()" onmouseout="this.start()">
                         <!-- Quartile, in itself, is an embedded solution to those new emerging artists who are finding their way into web3 space and calibrating a revenue stream out of markets. -->
-                        Engineering Researcher (Smart Village Movement) @UC Berkeley HAAS School Of Business · Full
-                        Stack Blockchain Developer @Timeswap · UI/UX Developer @Biconomy · iGE, Ahmedabad Chapter
+                        Full Stack Blockchain Developer @ITH Technologies · Engineering Researcher(Smart Village
+                        Movement)
+                        @UC Berkeley HAAS School Of Business · Prev. Full
+                        Stack Blockchain Developer @Timeswap · Prev. UI/UX Developer @Biconomy · iGE, Ahmedabad Chapter
                         @AIESEC
                     </marquee>
                 </div>
@@ -156,7 +202,8 @@
                 <div class="HeadlineShowcase" id="HeadlineShowcase">
                     <marquee direction"left" onmouseover="this.stop()" onmouseout="this.start()">
                         KERNEL KB3 Fellow · Google Developer Students Club Lead · Github Campus Expert · Microsoft Learn
-                        Student Ambassador - Beta · Ethereum India Fellow @Devfolio
+                        Student Ambassador - Beta · Ethereum India Fellow @Devfolio · Facebook PyTorch Nanodegree
+                        Scholar
                     </marquee>
                 </div>
             </div>
@@ -185,19 +232,27 @@
                 onmouseout="this.start()">
                 <div class="TestimonialSlider" id="TestimonialSlider">
                     <div class="TestimonialEntry" id="TestimonialEntry">
-                        <div style="margin-bottom: 10px;">Ahmed Al Balaghi</div>
-                        <div class="Comments" id="Comments">Jay has been a professional<div class="Comments" id="Comments">in every step of his work and is</div><div class="Comments" id="Comments">is passionate about his work</div>
+                        <div style="margin-bottom: 2px;">Ahmed Al Balaghi</div>
+                        <div class="Comments" id="Comments" style="margin-bottom: 10px; font-size: 10px;">CEO, Biconomy
+                        </div>
+                        <div class="Comments" id="Comments">Jay has been a professional<div class="Comments"
+                                id="Comments">in every step of his work and is</div>
+                            <div class="Comments" id="Comments">is passionate about his work</div>
                         </div>
                     </div>
                     <div class="TestimonialEntry" id="TestimonialEntry">
-                        <div style="margin-bottom: 10px;">Anupama Rani</div>
+                        <div style="margin-bottom: 2px;">Anupama Rani</div>
+                        <div class="Comments" id="Comments" style="margin-bottom: 10px; font-size: 10px;">Operation
+                            Lead, Timeswap</div>
                         <div class="Comments" id="Comments">A good team leader and<div class="Comments" id="Comments">a
                                 better team member</div>
                         </div>
                     </div>
                     <!-- <div class="TestimonialEntry" id="TestimonialEntry">Ameeth Devdas<div class="Comments" id="Comments">Jordar Bhai</div></div> -->
                     <div class="TestimonialEntry" id="TestimonialEntry">
-                        <div style="margin-bottom: 10px;">Divya Nailwal</div>
+                        <div style="margin-bottom: 2px;">Divya Nailwal</div>
+                        <div class="Comments" id="Comments" style="margin-bottom: 10px; font-size: 10px;">Developer,
+                            Biconomy</div>
                         <div class="Comments" id="Comments">Hardworking and a Quick learner.<div class="Comments"
                                 id="Comments">He never hesitates in trying out<div class="Comments" id="Comments">new
                                     things, that's his best quality.</div>
@@ -205,7 +260,9 @@
                         </div>
                     </div>
                     <div class="TestimonialEntry" id="TestimonialEntry">
-                        <div style="margin-bottom: 10px;">Dishant Pandya</div>
+                        <div style="margin-bottom: 2px;">Dishant Pandya</div>
+                        <div class="Comments" id="Comments" style="margin-bottom: 10px; font-size: 10px;">Professor, SOT
+                            - PDEU</div>
                         <div class="Comments" id="Comments">Jay is a Golden Triangle of</div>
                         <div class="Comments" id="Comments">Intelligence, Diligence and Passion.</div>
                         <div class="Comments" id="Comments">Desire to achieve what he wants!</div>
@@ -213,7 +270,9 @@
                     <!-- <div class="TestimonialEntry" id="TestimonialEntry">Harshita Singh<div class="Comments" id="Comments">Jordar Bhai</div></div> -->
                     <!-- <div class="TestimonialEntry" id="TestimonialEntry">Ricsson Ngo<div class="Comments" id="Comments">Jordar Bhai</div></div> -->
                     <div class="TestimonialEntry" id="TestimonialEntry">
-                        <div style="margin-bottom: 10px;">Sachin Tomar</div>
+                        <div style="margin-bottom: 2px;">Sachin Tomar</div>
+                        <div class="Comments" id="Comments" style="margin-bottom: 10px; font-size: 10px;">CTO, Biconomy
+                        </div>
                         <div class="Comments" id="Comments">Your creativity and passion for the<div class="Comments"
                                 id="Comments">project really made a difference in<div class="Comments" id="Comments">the
                                     execution. Keep it up :)</div>
@@ -228,7 +287,12 @@
         </div>
         <div class="Row1Column2">
             <div class="TestimonialHeading" id="TestimonialHeading">
-                Testimonials
+                <div class="TestimonialFooter" id="TestimonialFooter">
+                    &nbsp;&nbsp;&nbsp;&nbsp;Testimonials
+                    <div class="TestimonialContinue" id="TestimonialContinue" style="color: #606060 ">&nbsp;from where
+                        I've worked previously.</div>
+                </div>
+                <!-- Testimonials -->
             </div>
         </div>
         <div class="Row1Column3">
@@ -252,13 +316,15 @@
         </div>
         <div class="Row3Column2">
             <div class="Enlightenment" id="Enlightenment">
-                <div class="QuoteText">
+                Actively building products in web3 space.<br>
+                Open for opportunities and collaboration.
+                <!-- <div class="QuoteText">
                     <div class="QuotePlaceholder" id="QuotePlaceholder">When you have exhausted all possibilities,
                         remember this - you haven't.</div>
                 </div>
                 <div class="QuoteImage" id="QuoteImage">
                     <div class="ImagePlaceholder" id="ImagePlaceholder"></div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="Row3Column3">
@@ -266,13 +332,107 @@
         </div>
     </div>
     <div class="containerProjects" id="containerProjects">
-        <div class="Project1">
+        <!-- <div class="Project1">
             Projects
         </div>
         <div class="Project2" id="Project2">
             <div class="Overlay">
                 <div>That&nbsp;</div>
                 <div class="Gradient">Matters</div>
+            </div>
+        </div> -->
+        <div class="Package" id="Package">
+            <marquee class="PackageMarquee" id="PackageMarquee" direction="right" onmouseover="this.stop()"
+                onmouseout="this.start()">
+                <div class="PackageSlider" id="PackageSlider">
+                    <div class="PackageEntry" id="PackageEntry">
+                        <div class="PackageLogo" id="PackageLogo"></div>
+                        <div class="PackageInfo" id="PackageInfo">
+                            nft-aggregator
+                            <p style="font-size: 10px; font-family: Poppins-Regular;">A SDK built to fetch NFT metadata
+                                from<br>world-renowed NFT marketplaces over<br>EVM-compatible blockchains.</p>
+                        </div>
+                    </div>
+                    <div class="PackageEntry" id="PackageEntry">
+                        <div class="PackageLogo" id="PackageLogo"></div>
+                        <div class="PackageInfo" id="PackageInfo">
+                            price-indexer
+                            <p style="font-size: 10px; font-family: Poppins-Regular;">A SDK built to fetch price feed
+                                data from<br>Chainlink Oracles over EVM-compatible<br>blockchains as well as from DIA
+                                Org over NEAR.</p>
+                        </div>
+                    </div>
+                    <!-- <div class="PackageEntry" id="PackageEntry">Ameeth Devdas<div class="Comments" id="Comments">Jordar Bhai</div></div> -->
+                    <div class="PackageEntry" id="PackageEntry">
+                        <div class="PackageLogo" id="PackageLogo"
+                            style="background-image: url('./src/assets/python.jpg');"></div>
+                        <div class="PackageInfo" id="PackageInfo">
+                            ghidora
+                            <p style="font-size: 10px; font-family: Poppins-Regular;">An abstract python library for
+                                calculating<br>time complex math function such as<br>factorial, fibonnaci, and
+                                logarithm.</p>
+                        </div>
+                    </div>
+                </div>
+            </marquee>
+        </div>
+        <!-- ROW 1... -->
+        <div class="Row1Column1">
+
+        </div>
+        <div class="Row1Column2" style="grid-column-end: 4;">
+            <div class="TestimonialHeading" id="TestimonialHeading">
+                <div class="TestimonialFooter" id="TestimonialFooter">
+                    &nbsp;&nbsp;&nbsp;&nbsp;Open-source Packages
+                    <div class="TestimonialContinue" id="TestimonialContinue" style="color: #606060 ">&nbsp; for
+                        developers, I've built previously.</div>
+                </div>
+                <!-- Testimonials -->
+            </div>
+        </div>
+        <div class="Row1Column3" style="display: none;">
+
+        </div>
+        <div class="Row1Column4">
+
+        </div>
+
+        <!-- ROW 2... -->
+        <div class="Row2Column1">
+
+        </div>
+        <div class="Row2Column2" id="ProjectRow2Column2">
+            <!-- <div class="ProjectLayout" id="ProjectLayout">
+                <div class="ProjectTitle" id="ProjectTitle">Quartile</div>
+                <div class="Deck" id="Deck1"></div>
+            </div>
+            <div class="DeckDescription" id="DD1">
+                <marquee class="projectMarquee" id="projectMarquee">Quartile, in itself, is an embedded solution to
+                    those new emerging artists who are finding their way into web3 space and calibrating a revenue
+                    stream out of the NFT marketplaces.</marquee>
+            </div> -->
+        </div>
+        <div class="Row2Column3" id="ProjectRow2Column3">
+            <!-- <div class="ProjectLayout" id="ProjectLayout">
+                <div class="ProjectTitle" id="ProjectTitle">Cleopatra</div>
+                <div class="Deck" id="Deck2"></div>
+            </div>
+            <div class="DeckDescription" id="DD1">
+                <marquee class="projectMarquee" id="projectMarquee">Cleopatra, at its core, is a multi-purpose Twitter
+                    bot that can constantly push forward the user engagement of a decentralized ecosystem.</marquee>
+            </div> -->
+        </div>
+        <div class="Row2Column4">
+
+        </div>
+    </div>
+
+    <div class="containerExtra" id="containerExtra">
+        <div class="Carousel" id="Carousel">
+            <div class="CaourselTemplate" id="CaourselTemplate">
+                <div class="CarouselMockup" id="CarouselMockup">
+                    Carousel<br>under development
+                </div>
             </div>
         </div>
         <!-- ROW 1... -->
@@ -293,57 +453,29 @@
         <div class="Row2Column1">
 
         </div>
-        <div class="Row2Column2" id="ProjectRow2Column2">
-            <div class="ProjectLayout" id="ProjectLayout">
-                <div class="ProjectTitle" id="ProjectTitle">Quartile</div>
-                <div class="Deck" id="Deck1"></div>
-            </div>
-            <div class="DeckDescription" id="DD1"><marquee class="projectMarquee" id="projectMarquee">Quartile, in itself, is an embedded solution to those new emerging artists who are finding their way into web3 space and calibrating a revenue stream out of the NFT marketplaces.</marquee></div>
-        </div>
-        <div class="Row2Column3" id="ProjectRow2Column3">
-            <div class="ProjectLayout" id="ProjectLayout">
-                <div class="ProjectTitle" id="ProjectTitle">Cleopatra</div>
-                <div class="Deck" id="Deck2"></div>
-            </div>
-            <div class="DeckDescription" id="DD1"><marquee class="projectMarquee" id="projectMarquee">Cleopatra, at its core, is a multi-purpose Twitter bot that can constantly push forward the user engagement of a decentralized ecosystem.</marquee></div>
-        </div>
-        <div class="Row2Column4">
-
-        </div>
-
-        <!-- ROW 3... -->
-        <div class="Row3Column1">
-
-        </div>
-        <div class="Row3Column2">
-
-        </div>
-        <div class="Row3Column3">
-
-        </div>
-        <div class="Row3Column4">
-
-        </div>
-
-        <!-- ROW 4... -->
-        <div class="Row4Column1">
-
-        </div>
-        <div class="Row4Column2" id="ProjectRow4Column2">
-            <div class="ProjectLayout" id="ProjectLayout">
+        <div class="Row2Column2" id="ProjectRow1Column2">
+            <!-- <div class="ProjectLayout" id="ProjectLayout">
                 <div class="ProjectTitle" id="ProjectTitle" style="color: #0f0f13;">Compresso</div>
                 <div class="Deck" id="Deck3"></div>
             </div>
-            <div class="DeckDescription" id="DD1"><marquee class="projectMarquee" id="projectMarquee">Save space to save every capture that matters.</marquee></div>
+            <div class="DeckDescription" id="DD1">
+                <marquee class="projectMarquee" id="projectMarquee">Save space to save every capture that matters.
+                </marquee>
+            </div> -->
         </div>
-        <div class="Row4Column3" id="ProjectRow4Column3">
-            <div class="ProjectLayout" id="ProjectLayout">
+        <div class="Row2Column3" id="ProjectRow1Column3">
+            <!-- <div class="ProjectLayout" id="ProjectLayout">
                 <div class="ProjectTitle" id="ProjectTitle">Mystic</div>
                 <div class="Deck" id="Deck4"></div>
             </div>
-            <div class="DeckDescription" id="DD1"><marquee class="projectMarquee" id="projectMarquee">Mystic is an open-source project designed to help developers instantly get the most optimized code for their respective intended input and output with additionally providing them with 4 different coding language export namely C, C++, Python and Java</marquee></div>
+            <div class="DeckDescription" id="DD1">
+                <marquee class="projectMarquee" id="projectMarquee">Mystic is an open-source project designed to help
+                    developers instantly get the most optimized code for their respective intended input and output with
+                    additionally providing them with 4 different coding language export namely C, C++, Python and Java
+                </marquee>
+            </div> -->
         </div>
-        <div class="Row4Column4">
+        <div class="Row2Column4">
 
         </div>
     </div>
@@ -351,9 +483,35 @@
         <div class="ContactGrid">
             <div class="ContactFooter" id="ContactFooter">
                 <div class="ContactHeading" id="ContactHeading">
-                    Get in touch!
+                    <div>Get in touch!</div>
+                    <div class="mediaLinks" id="mediaLinks">
+                        <div class="mediaLinksul" id="mediaLinksul">
+                            <div class="mediaLinksli" id="mediaLinksli"><a href="https://www.behance.net/jayrank" target="_blank" rel="noopener" style="color: #ffffff;">Behance</a></div>
+                            <div class="mediaLinksli" id="mediaLinksli"><a href="https://dribbble.com/JayRank" target="_blank" rel="noopener" style="color: #ffffff;">Dribbble</a></div>
+                            <div class="mediaLinksli" id="mediaLinksli"><a href="https://github.com/RankJay" target="_blank" rel="noopener" style="color: #ffffff;">GitHub</a></div>
+                        </div>
+
+                        <div class="mediaLinksul" id="mediaLinksul">
+                            <div class="mediaLinksli" id="mediaLinksli"><a href="https://www.instagram.com/rank_jay/" target="_blank" rel="noopener" style="color: #ffffff;">Instagram</a></div>
+                            <div class="mediaLinksli" id="mediaLinksli"><a href="https://twitter.com/RankJay1" target="_blank" rel="noopener" style="color: #ffffff;">Twitter</a></div>
+                            <div class="mediaLinksli" id="mediaLinksli"><a href="https://www.linkedin.com/in/rankjay/" target="_blank" rel="noopener" style="color: #ffffff;">LinkedIn</a></div>
+                        </div>
+
+                        <div class="mediaLinksul" id="mediaLinksul">
+                            <div class="mediaLinksli" id="mediaLinksli"><a href="https://www.facebook.com/rank.jay/" target="_blank" rel="noopener" style="color: #ffffff;">Facebook</a></div>
+                            <div class="mediaLinksli" id="mediaLinksli"><a href="mailto:rank01jay01@gmail.com" target="_blank" rel="noopener" style="color: #ffffff;">Mail</a></div>
+                            <div class="mediaLinksli" id="mediaLinksli"><a href="https://in.pinterest.com/RankJay" target="_blank" rel="noopener" style="color: #ffffff;">Pinterest</a></div>
+                        </div>
+                    </div>
+                    <div class="ContactFooterLine" id="ContactFooterLine">
+                        Ⓒ Copyrights since 2018&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;All Rights Reserved by Jay Rank
+                    </div>
                 </div>
-                <div class="references" id="references"></div>
+                <!-- <div class="references" id="references">
+                    <div class="newsletterBox" id="newsletterBox">
+                        
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -379,13 +537,31 @@
         });
     </script>
     <script>
+        window.onscroll = function () { scrollFunction() };
+
         var today = new Date();
         var timeInHour = today.getHours();
 
+        const modal = document.querySelector(".contactMeModal");
+        const trigger = document.querySelector(".trigger");
+        const closeButton = document.querySelector(".close-button");
+
+        function toggleModal() {
+            modal.classList.toggle("show-contactMeModal");
+        }
+
+        function windowOnClick(event) {
+            if (event.target === modal) {
+                toggleModal();
+            }
+        }
+
+
         if (timeInHour >= 19 || timeInHour < 5) {
             // document.getElementById("TimeMinutes").style.color = "#353535";
-            document.getElementById("Project2").style.color = "#1e1e25";
+            // document.getElementById("Project2").style.color = "#1e1e25";
             document.getElementById("Day").style.color = "#353535";
+            console.log('hi')
             $(document).ready(function () {
                 $("a").hover(function () {
                     $(this).css("color", "#ffffff");
@@ -395,7 +571,7 @@
             });
         }
 
-        window.onscroll = function () { scrollFunction() };
+
 
         function scrollFunction() {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -421,6 +597,11 @@
             document.documentElement.style.setProperty('--theme-day-night-foreground', '#ffffff');
             document.documentElement.style.setProperty('--theme-day-night-filter', 'invert(100%) sepia(100%) saturate(0%) hue-rotate(126deg) brightness(105%) contrast(104%)');
         }
+
+        trigger.addEventListener("click", toggleModal);
+        closeButton.addEventListener("click", toggleModal);
+        window.addEventListener("click", windowOnClick);
+
     </script>
     <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.js"></script> -->
