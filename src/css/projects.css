@@ -371,7 +371,7 @@ form {
 }
 
 .quartile {
-    background-image: url('../assets/quartile.svg');background-size: cover;background-position: center;
+    background-image: url('../assets/quartile.png');background-size: cover;background-position: center;
 }
 
 .cleopatra {
@@ -387,7 +387,7 @@ form {
 }
 
 .dechyon {
-    background-image: url('../assets/dechyon.svg');background-size: cover;background-position: center;
+    background-image: url('../assets/dechyon.png');background-size: cover;background-position: center;
 }
 
 .Row2Column1 {
