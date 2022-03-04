@@ -540,7 +540,7 @@ form {
     }
     .containerAbout {
         grid-template-columns: 0.1fr 1.45fr 0.1fr; 
-        grid-template-rows: 0.15fr 1.5fr 0.5fr; 
+        grid-template-rows: 0.15fr 1.5fr 0.75fr; 
     }
     .LiveTile {
         display: none;
