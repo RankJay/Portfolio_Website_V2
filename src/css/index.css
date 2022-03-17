@@ -475,7 +475,7 @@ form {
     height: 100%;
     padding: 0%;
     background-color: var(--theme-responsive-color);
-    /* background-image: url("../assets/image.png"); */
+    background-image: url("../assets/cs2021.jpg");
     background-position: center;
     background-size: cover;
 }
