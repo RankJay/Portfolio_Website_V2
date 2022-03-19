@@ -5,34 +5,34 @@ window.onload = function () {
     var attentionMessage2 = 'Psssss....';
     var blinkEvent = null;
 
-    document.oncontextmenu = new Function("return false;")
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.onkeydown = function (e) {
-      if (e.keyCode == 123) {
-        alert("This function has been disabled to prevent you from stealing my code!");
-        return false;
-      }
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        alert("This function has been disabled to prevent you from stealing my code!");
-        return false;
-      }
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        alert("This function has been disabled to prevent you from stealing my code!");
-        return false;
-      }
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        alert("This function has been disabled to prevent you from stealing my code!");
-        return false;
-      }
-      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        alert("This function has been disabled to prevent you from stealing my code!");
-        return false;
-      }
-      if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) {
-        alert("Just try being original for once!");
-        return false;
-      }
-    }
+    // document.oncontextmenu = new Function("return false;")
+    // document.addEventListener('contextmenu', e => e.preventDefault());
+    // document.onkeydown = function (e) {
+    //   if (e.keyCode == 123) {
+    //     alert("This function has been disabled to prevent you from stealing my code!");
+    //     return false;
+    //   }
+    //   if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+    //     alert("This function has been disabled to prevent you from stealing my code!");
+    //     return false;
+    //   }
+    //   if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+    //     alert("This function has been disabled to prevent you from stealing my code!");
+    //     return false;
+    //   }
+    //   if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+    //     alert("This function has been disabled to prevent you from stealing my code!");
+    //     return false;
+    //   }
+    //   if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+    //     alert("This function has been disabled to prevent you from stealing my code!");
+    //     return false;
+    //   }
+    //   if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) {
+    //     alert("Just try being original for once!");
+    //     return false;
+    //   }
+    // }
 
     var dayMapper = { "0": "Sunday", "1": "Monday", "2": "Tuesday", "3": "Wednesday", "4": "Thursday", "5": "Friday", "6": "Saturday" }
     var MonthMapper = { "1": "January", "2": "February", "3": "March", "4": "April", "5": "May", "6": "June", "7": "July", "8": "August", "9": "September", "10": "October", "11": "November", "12": "December" };
@@ -45,6 +45,7 @@ window.onload = function () {
     document.getElementById("Day").innerHTML = dayMapper[Day];
 
     if (timeInHour >= 19 || timeInHour < 5) {
+      console.log(timeInHour)
         var HREF = document.getElementById('href');
         HREF.style["color"] = "#888888";
         // var bodyNightTheme = document.getElementById('bodyNightTheme');
